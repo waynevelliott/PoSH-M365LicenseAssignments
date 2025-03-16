@@ -1,5 +1,4 @@
-# PoSH-M365LicenseAssignments
-PowerShell Script for M365 License Assignment Analysis
+# PowerShell Script for M365 License Assignment Analysis
 
 I put together a PowerShell script that analyzes Microsoft 365 license assignments within a tenant. This script is designed to provide detailed information about license distribution, including both direct assignments and group-based licensing. Here's a breakdown of its functionality:
 
