@@ -41,11 +41,11 @@ Use Cases:
 
 This script is particularly useful for IT administrators and licensing managers who need to maintain an accurate overview of their Microsoft 365 license assignments. It streamlines the process of license management and provides valuable insights into the current state of license distribution within the organization.
 
-# Select a License
+### Select a License
 ![1  Select a License SKU](https://github.com/user-attachments/assets/8a096524-eaef-42c5-9a5c-05e5ae01ecee)
 
-# Retrieving Licensed Users
+### Retrieving Licensed Users
 ![2  Retrieving Licensed Users](https://github.com/user-attachments/assets/e4f134cc-1ffa-4399-83ab-6a834384c488)
 
-# Displaying Details for Licensed Users
+### Displaying Details for Licensed Users
 ![3  Displaying License Details for Users](https://github.com/user-attachments/assets/d88da6f0-56cd-4387-b34f-f41339523c84)
