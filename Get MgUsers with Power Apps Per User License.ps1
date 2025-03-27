@@ -2,7 +2,7 @@
 
 function Write-HostWithTimestamp ([string]$Message) {Write-Host ("{0}`t{1}" -f [datetime]::Now.ToString("yyyyMMdd HH:mm:ss"), $Message)}
 function Get-ADDSExpiresOn ([string]$upn) {$ExpiresOn=([datetime]::FromFileTime(([adsisearcher]("(userprincipalname={0})" -f $upn)).FindOne().Properties['accountexpires'][0])); if(!($ExpiresOn -lt "1/1/1700")) {$ExpiresOn.ToString("MM/dd/yyyy")}}
-function Get-LicenseAssignmentStatus ([array]$LicenseAssignmentStates) {($LicenseAssignmentStates | Where-Object {$_.SkuId -eq $subscribedSku.SkuId} | ForEach-Object {if ($_.AssignedByGroup) {$mgLicensedGroupsHash[$_.AssignedByGroup]} else {"Direct"}} | Sort-Object) -join "; "}
+function Get-LicenseAssignmentStatus ([array]$LicenseAssignmentStates) {($LicenseAssignmentStates | Where-Object {$_.SkuId -eq $subscribedSku.SkuId} | ForEach-Object {if ($_.AssignedByGroup) {$mgLicensedGroupsHash[$_.AssignedByGroup]} else {"Direct"}} | Sort-Object) -join " | "}
 function Join-ServicePlanArray ([array]$ServicePlans) {$outputArray = @(); $ServicePlans | ForEach-Object {$outputArray += if (([array]::IndexOf($ServicePlans, $_)+1) % 3 -eq 0) {("{0}`n" -f $_)} else {"{0}; " -f $_}}; $outputArray -join '';}
 
 Write-HostWithTimestamp "Getting Subscribed SKU List"
